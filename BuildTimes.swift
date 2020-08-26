@@ -38,10 +38,10 @@ func startBuild() {
 	let dateKey = dateString(for: startDate)
 	
 	var buildData = getBuildData() ?? []
-	if var todaysBuildData = buildData.first(where: { $0.date == dateKey }) {
-		todaysBuildData.lastStart = startDate
+	if let index = buildData.firstIndex(where: { $0.date == dateKey }) {
+		buildData[index].lastStart = startDate
 	} else {
-		buildData.append(BuildData(date: dateKey, totalBuildTime: 0, lastStart: startDate, totalBuilds: 1))
+		buildData.append(BuildData(date: dateKey, totalBuildTime: 0, lastStart: startDate, totalBuilds: 0))
 	}
 	write(buildData)
 }
