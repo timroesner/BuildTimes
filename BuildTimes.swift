@@ -86,7 +86,9 @@ private func getBuildData() -> [BuildData]? {
 }
 
 private func write(_ buildData: [BuildData]) {
-	let fileData = try! JSONEncoder().encode(buildData)
+	let encoder = JSONEncoder()
+	encoder.outputFormatting = .prettyPrinted
+	let fileData = try! encoder.encode(buildData)
 	let fileManager = FileManager()
 	fileManager.createFile(atPath: fileURL().path, contents: fileData, attributes: nil)
 }
