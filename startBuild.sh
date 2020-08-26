@@ -1,2 +1,2 @@
 #!/bin/bash
-/Users/Tim/BuildTimes/BuildTimes -start
+~/Developer/BuildTimes/BuildTimes -start
