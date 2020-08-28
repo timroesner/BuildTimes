@@ -15,6 +15,7 @@ $ swiftc BuildTimes.swift
 Finally you need to go into the Xcode behavior settings and select the scripts to run for the corresponding trigger. I choose the `endBuild.sh` script to run for both `Succeeds` and the `Fails` behavior.
 <img width="912" alt="Starts Build Behavior" src="https://user-images.githubusercontent.com/13894518/91257933-f0500580-e71f-11ea-866c-37274ea746f0.png">
 <img width="912" alt="Succeeds Build Behavior" src="https://user-images.githubusercontent.com/13894518/91257938-f2b25f80-e71f-11ea-8d59-cfc6c7390da7.png">
+<img width="912" alt="Screen Shot 2020-08-25 at 10 09 18 PM" src="https://user-images.githubusercontent.com/13894518/91516032-557e3500-e89f-11ea-9044-51d18a88d49c.png">
 
 ## Usage
 Once you're done with the setup, it is suggested you do a build and check your Documents directory that the output file is created without issues. If you do not see a file show up after building, double check that the path you entered was correct. You can also try to trigger the `Starts` behavior manually by calling: `./BuildTimes -start`,
