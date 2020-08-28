@@ -10,12 +10,6 @@ To get started clone this repo locally and compile the Swift script in terminal 
 $ swiftc BuildTimes.swift
 ```
 
-Once you have done that you'll need to modify the paths within the `.sh` files. By default I'm using the `Developer` directory within your home folder. However you may choose a different path:
-```bash
-#!/bin/bash
-~/Developer/BuildTimes/BuildTimes -start
-```
-
 **Note:** By default the script will store the generated data within your `Documents` directory. This makes it easily accessible and can be the same across all machines. However if you prefere to store the generated `.json` somewhere else you can go into the `BuildTimes.swift` script and modify the `func fileURL()` helper function.
 
 Finally you need to go into the Xcode behavior settings and select the scripts to run for the corresponding trigger. I choose the `endBuild.sh` script to run for both `Succeeds` and the `Fails` behavior.
