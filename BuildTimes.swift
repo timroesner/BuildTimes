@@ -67,7 +67,7 @@ func listBuildTimes() {
 	
 	for buildTime in buildData {
 		let totalBuildTime = buildTime.totalBuildTime.asReadableTime()
-		let averageBuildTime = (buildTime.totalBuildTime / Double(buildTime.totalBuilds)).asReadableTime()
+		let averageBuildTime = (buildTime.totalBuildTime / Double(max(buildTime.totalBuilds, 1))).asReadableTime()
 		print("\(buildTime.date): \t Total Build Time: \(totalBuildTime) \t Average Build Time: \(averageBuildTime)")
 	}
 }
